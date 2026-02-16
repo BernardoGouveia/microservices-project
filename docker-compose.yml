@@ -1,6 +1,6 @@
 # Docker Compose Configuration
 # 
-# ⚠️ IMPORTANT: This file should be created by students in Week 2
+# IMPORTANT: This file should be created by students in Week 2
 # 
 # TODO: Complete this docker-compose.yml file as part of Week 2 exercises
 # 
@@ -11,7 +11,6 @@
 # 4. Configure service dependencies (depends_on)
 # 5. Create a Docker network for service communication
 #
-# See docker-compose.example.yml for a reference implementation
 # See Aulas/Week-02/ for detailed instructions
 
 version: '3.8'
