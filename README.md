@@ -720,6 +720,8 @@ act workflow_dispatch -W .github/workflows/hello.yml  # run a specific workflow
 
 Secrets can be supplied with `--secret-file .secrets` (file format: `KEY=VALUE` per line — keep it gitignored).
 
+> ⚠️ **Known limitation:** the `java-build` job fails locally under `act` with `mvn: command not found`. This is expected — the default `catthehacker/ubuntu:act-medium` image does not ship with Maven preinstalled, while the GitHub-hosted `ubuntu-latest` runner does. See [nektos/act#107](https://github.com/nektos/act/issues/107). To work around it, use the full runner image: `act -P ubuntu-latest=catthehacker/ubuntu:full-latest -j java-build` (~17 GB download).
+
 ### Docker Hub repository
 
 Images are published to Docker Hub under the user configured in `DOCKERHUB_USERNAME`:
