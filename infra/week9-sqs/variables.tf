@@ -14,7 +14,8 @@ variable "tags" {
   type        = map(string)
   description = "Tags applied to both queues."
   default = {
-    Course = "cloud-computing"
-    Week   = "10"
+    Course    = "cloud-computing"
+    Week      = "10"
+    ManagedBy = "terraform"
   }
 }
